@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{
+      body {
         font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
       }
       form {
@@ -19,13 +19,13 @@
         gap: 8px;
         margin-bottom: 24px;
       }
-      form input{
+      form input {
         padding: 8px;
         border-radius: 8px;
         outline: none;
         border: 1px solid #ddd;
       }
-      form button{
+      form button {
         background-color: #333;
         color: #fff;
         padding: 12px 32px;
@@ -36,29 +36,47 @@
         cursor: pointer;
         font-size: 16px;
       }
-      table{
+      table {
         width: 75%;
         margin: 0 auto;
         margin-top: 48px;
         border: 1px solid #ddd;
       }
-      table thead{
+      table thead {
         background-color: #333;
         color: #fff;
         padding: 8px;
         border-radius: 4px;
       }
-      table thead th{
+      table thead th {
         padding: 8px;
       }
-      table tbody tr:nth-child(odd){
+      table tbody tr:nth-child(odd) {
         background-color: #ddd;
       }
-      table tbody tr:nth-child(even){
+      table tbody tr:nth-child(even) {
         background-color: #fcf4f4;
       }
-      table tbody td{
+      table tbody td {
         padding: 12px;
+      }
+      .action-buttons {
+        display: flex;
+        gap: 4px;
+        flex-direction: row-reverse;
+      }
+      .action-buttons button{
+        color: #ffffff;
+        border: none;
+        outline: none;
+        padding: 4px 12px;
+        cursor: pointer;
+      }
+      .action-buttons button.edit{
+        background-color: #008000;
+      }
+      .action-buttons button.delete{
+        background-color: red;
       }
     </style>
   </head>
@@ -66,7 +84,7 @@
     <form id="student-form">
       <div>
         <label for="fName">First Name</label>
-        <input type="text" id="fName" value="Abdullah"/>
+        <input type="text" id="fName" value="Abdullah" />
       </div>
       <div>
         <label for="lName">Last Name</label>
@@ -74,7 +92,7 @@
       </div>
       <div>
         <label for="roll">Roll</label>
-        <input type="text" id="roll" value="28"/>
+        <input type="text" id="roll" value="28" />
       </div>
       <button id="submit" type="submit">Submit</button>
     </form>
@@ -84,6 +102,7 @@
           <th>First Name</th>
           <th>Last Name</th>
           <th>Roll</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody></tbody>
